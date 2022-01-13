@@ -1,0 +1,28 @@
+Package
+```{r}
+#install.packages("RPostgreSQL")
+library("RPostgreSQL")
+```
+Connecting with database 
+```{r}
+connection = dbConnect("PostgreSQL", dbname="SQLLearn", host="localhost", port=5434,
+                    user="postgres", password=Database)
+```
+SQL consult 
+```{r}
+#Execute with ctrl + shift + enter
+sql = " SELECT Quantity, TotalValue, Product, Total FROM ItensSale  IV
+      INNER JOIN Sales V ON (IV.IDSale = V.IDSale) 
+      INNER JOIN Products P ON (IV.IDProducts = P.IDProducts)"
+sales = dbGetQuery(connection, sql)
+```
+returned data
+```{r}
+class(sales)
+dim(sales)
+head(sales)
+```
+close connection
+```{r}
+dbDisconnect(connection)
+```
