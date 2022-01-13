@@ -1,7 +1,7 @@
 SET DATESTYLE TO PostgreSQL,European;
 
 CREATE SEQUENCE IDSeller;
-CREATE TABLE Selleres(
+CREATE TABLE Sellers(
   IDSeller int default nextval('IDSeller'::regclass) PRIMARY KEY,
   Name Varchar(50)
 );
@@ -25,7 +25,7 @@ CREATE TABLE Clients(
 CREATE SEQUENCE IDSale;
 CREATE TABLE Sales(
   IDSale int default nextval('IDSale'::regclass) PRIMARY KEY,
-  IDSeller int references Selleres (IDSeller),
+  IDSeller int references Sellers (IDSeller),
   IDClient int references Clients (IDClient),
   Data Date,
   Total Numeric(10,2)
