@@ -1,0 +1,10 @@
+INSERT INTO Selleres(Name) VALUES ('Armando Lago');
+INSERT INTO Selleres(Name) VALUES ('Capitolino Bahía');
+INSERT INTO Selleres(Name) VALUES ('Daniel Pirajá');
+INSERT INTO Selleres(Name) VALUES ('Godo Capiperibe');
+INSERT INTO Selleres(Name) VALUES ('Hélio Liberato');
+INSERT INTO Selleres(Name) VALUES ('Iberê Lacerda');
+INSERT INTO Selleres(Name) VALUES ('Jéssica Castelão');
+INSERT INTO Selleres(Name) VALUES ('Napoleão Méndez');
+INSERT INTO Selleres(Name) VALUES ('Simão Rivero');
+INSERT INTO Selleres(Name) VALUES ('Tobias Furtado');
